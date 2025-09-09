@@ -222,7 +222,7 @@ const AboutPage: React.FC = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <a
-            href="https://github.com/Ojhaamrit14/stock-market-prediction"
+            href="https://github.com/Ojhaamrit14/stock-price-prediction"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline flex items-center"
