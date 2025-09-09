@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 30 64 175; /* blue-700 */
+    --color-secondary: 20 184 166; /* teal-500 */
+    --color-accent: 217 70 239; /* purple-500 */
+    --color-success: 16 185 129; /* green-500 */
+    --color-warning: 245 158 11; /* amber-500 */
+    --color-error: 239 68 68; /* red-500 */
+    --color-background: 255 255 255;
+    --color-foreground: 30 41 59; /* slate-800 */
+    --color-card: 255 255 255;
+    --color-card-foreground: 15 23 42; /* slate-900 */
+    --color-muted: 226 232 240; /* slate-200 */
+    --color-muted-foreground: 100 116 139; /* slate-500 */
+    --color-border: 226 232 240; /* slate-200 */
+  }
+
+  .dark {
+    --color-primary: 59 130 246; /* blue-500 */
+    --color-secondary: 45 212 191; /* teal-400 */
+    --color-accent: 216 180 254; /* purple-300 */
+    --color-success: 34 197 94; /* green-500 */
+    --color-warning: 251 191 36; /* amber-400 */
+    --color-error: 248 113 113; /* red-400 */
+    --color-background: 15 23 42; /* slate-900 */
+    --color-foreground: 241 245 249; /* slate-100 */
+    --color-card: 30 41 59; /* slate-800 */
+    --color-card-foreground: 248 250 252; /* slate-50 */
+    --color-muted: 51 65 85; /* slate-700 */
+    --color-muted-foreground: 148 163 184; /* slate-400 */
+    --color-border: 51 65 85; /* slate-700 */
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased transition-colors duration-200;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white font-medium rounded-lg 
+      hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50
+      transition-all duration-200 ease-in-out;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-secondary text-white font-medium rounded-lg 
+      hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary/50
+      transition-all duration-200 ease-in-out;
+  }
+  
+  .btn-outline {
+    @apply px-4 py-2 border border-primary text-primary font-medium rounded-lg 
+      hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary/50
+      transition-all duration-200 ease-in-out;
+  }
+  
+  .card {
+    @apply bg-card text-card-foreground rounded-xl border border-border shadow-sm p-6
+      hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .input {
+    @apply px-3 py-2 bg-background border border-border rounded-lg w-full
+      focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent
+      transition-all duration-200;
+  }
+}
